@@ -48,3 +48,19 @@ class Solution {
         return true; 
     }
 }
+##PYTHON APPROACH
+
+class Solution(object):
+    def canFormArray(self, arr, pieces):
+        mapping = {}
+        for piece in pieces:
+            mapping[piece[0]] = piece
+        
+        ans = []
+        for num in arr:
+            if num in mapping:
+                ans += mapping[num]
+        
+        return ans == arr
+
+
